@@ -24,6 +24,7 @@ function calculaNotaAluno(_notaP1 = 0, _notaP2 = 0, _notaP3 = 0, _notaP4 = 0) {
 
 }
 
+
 SWITCH CASE
 
 var notaP1 = 0
