@@ -51,25 +51,26 @@ Uma empresa quer aumentar o salário dos funcionários dada a seguinte tábela
 Crie um código que recebe o salario do funcionário(apenas numérico) e retorne o salario atual, a porcentagem de correção e o valor corrigido
 */
 
-/* function corrigiSalario(c1 = 0.15, c2 = 0.12, c3 = 0.10, c4 = 0.07, c5 = 0.04, c6 = 0.0, salario = 0, salariocorrigido) {
+function corrigiSalario(c1 = 0.15, c2 = 0.12, c3 = 0.10, c4 = 0.07, c5 = 0.04, c6 = 0.0, salario = 0, salariocorrigido) {
 
-} if (salario >= 400) {
-    salariocorrigido = salario * c1
-} else
+    if (salario >= 400) {
+        salariocorrigido = salario * c1
+    }
     if (salario >= 400, 01 && salario <= 700, 00) {
         salariocorrigido = salario * c2
-    } else
-        if (salario >= 700, 01 && salario <= 1000, 00) {
-            salariocorrigido = salario * c3
-        } else
-            if (salario >= 1000, 01 && salario <= 2000, 00) {
-                salariocorrigido = salario * c4
-            } else
-                if (salario >= 2000, 01 && salario <= 3500, 00) {
-                    salariocorrigido = salario * c5
-                } else
-                    if (salario >= 3500, 01) {
-                        salariocorrigido = salario * c6
-                    }
-return salariocorrigido */
+    }
+    if (salario >= 700, 01 && salario <= 1000, 00) {
+        salariocorrigido = salario * c3
+    }
+    if (salario >= 1000, 01 && salario <= 2000, 00) {
+        salariocorrigido = salario * c4
+    }
+    if (salario >= 2000, 01 && salario <= 3500, 00) {
+        salariocorrigido = salario * c5
+    }
+    if (salario >= 3500, 01) {
+        salariocorrigido = salario * c6
+    }
+    return salariocorrigido
+}
 
