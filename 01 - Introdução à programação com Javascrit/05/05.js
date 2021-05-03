@@ -11,20 +11,23 @@ Obs: você pode retonar 1 valor por 1 , ou utilizar um método chamado append.
 
 exemplo prático
 */
-var lista = [1,2,3,4]
-
-function calculaPares(lista){
+var lista = [2, 4, 5, 6]
+           
+function calculaPares(lista) {
+    var listaLocal = []
     var tamanhoLista = lista.length; // Método para retornar tamanho da lista
+
     //Nesse for eu percorro a lista de números que eu crie.
-    for(var i = 0; i < tamanhoLista; i++){
-
+    for (var i = 0; i < tamanhoLista; i++) {
         //Nesse console.log(print) eu retorno cada número da lista 1 por vez
-        console.log(lista[i])
-
+                
+        if(lista[i]%2 === 0){
+            listaLocal.push(lista[i])
+        }        
         //Agora é a sua vez! Termine o meu código retornando apenas os número pares
         //Ps.: Antes de rodar o código, teste ele no seu browser para ver como ele se comporta
     }
-
+    console.log(listaLocal)
 }
 /* Questão 02
 
@@ -41,7 +44,7 @@ Saída: 15
 O programa deverá perguntar 5 vezes por uma entrada
 */
 
-function somaNumeros(){
+function somaNumeros() {
 
 }
 
@@ -66,37 +69,37 @@ var campeonato = {
             "flarinthians": "vitoria",
             "gremense": "vitoria",
             "Palmasco": "derrota",
-            "Sants-fogo": "derrota"
+            "Santsfogo": "derrota"
         },
         02: {
             "flarinthians": "derrota",
             "gremense": "derrota",
             "Palmasco": "vitoria",
-            "Sants-fogo": "vitoria"
+            "Santsfogo": "vitoria"
         }
         , 03: {
             "flarinthians": "vitoria",
             "gremense": "derrota",
             "Palmasco": "derrota",
-            "Sants-fogo": "vitoria"
+            "Santsfogo": "vitoria"
         }
         , 04: {
             "flarinthians": "vitoria",
             "gremense": "derrota",
             "Palmasco": "vitoria",
-            "Sants-fogo": "derrota"
+            "Santsfogo": "derrota"
         }
         , 05: {
             "flarinthians": "derrota",
             "gremense": "derrota",
             "Palmasco": "vitoria",
-            "Sants-fogo": "vitoria"
+            "Santsfogo": "vitoria"
         },
         06: {
             "flarinthians": "vitoria",
             "gremense": "derrota",
             "Palmasco": "vitoria",
-            "Sants-fogo": "derrota"
+            "Santsfogo": "derrota"
         }
     }
 }
@@ -104,13 +107,32 @@ var campeonato = {
 //Boa sorte!
 
 function calculaCampeao(campeonamento) {
-    
-    var tamanhoObjeto = Object.keys(campeonamento.jogos).length // Retorna a quantidade de jogos no campeonato
-    
-    for(var i = 1; i <= tamanhoObjeto; i++){
 
-        //Retornando todos os resultados dos jogos do flarinthians
-        console.log(campeonamento.jogos[i].flarinthians)
+    var tamanhoObjeto = Object.keys(campeonamento.jogos).length // Retorna a quantidade de jogos no campeonato
+    var contadorFla = 0;
+    var contadorGre = 0;
+    var contadorPal = 0;
+    var contadorSant = 0;
+
+    for (var i = 1; i <= tamanhoObjeto; i++) {
+
+        if (campeonamento.jogos[i].flarinthians === "vitoria") {
+            contadorFla++
+        }
+        if (campeonamento.jogos[i].gremense === "vitoria") {
+            contadorGre++
+        }
+        if (campeonamento.jogos[i].Palmasco === "vitoria") {
+            contadorPal++
+        }
+        if (campeonamento.jogos[i].Santsfogo === "vitoria") {
+            contadorSant++
+        }
     }
+
+    console.log(`Vitorias do Fla : ${contadorFla}`)
+    console.log(`Vitorias do Gre : ${contadorGre}`)
+    console.log(`Vitorias do Pa : ${contadorPal}`)
+    console.log(`Vitorias do Sa : ${contadorSant}`)
 
 }

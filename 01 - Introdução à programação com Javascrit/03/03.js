@@ -122,7 +122,7 @@ O seu programa deve receber o tipo de operação entrada pelo usuário e garanti
 os dois números entrados serão calculados de acordo.
 
 Exemplo:
-Chamada : funçãoCalculadora("Multiplicação", 2, 2)
+Chamada : functionCalculadora("Multiplicação", 2, 2)
 Saída : "A calculadora executou a operação de Multiplicação e retornou o valor 4"
 
 Será necessário criar pelo menos as quatro operações básicas da matemática(
@@ -149,11 +149,14 @@ function Calculadora(n1, n2, operation) {
 
 return Result}
 
+function multipla(a, b) {
+    return a * b;
+}
 
 /* Questão 02 (Valendo uma pontuação maior)
 
 
-Questão OBI(Olimpíada Brasileira de Matemática - 2012, Fase 2, Nível Junior)
+Questão OBI(Olimpíada Brasileira de Informática - 2012, Fase 2, Nível Junior)
 
 João Deseja fazer bolos para seus amigos usando uma receita que indica que devem ser
 usadas 2 xícaras de farinha de trigo, 3 ovos e 5 colheres de sopa de leite. Em casa
@@ -169,7 +172,7 @@ colheres de sopa de leite que João tem em Casa
 
 Saída: Retornar a quantidade máxima de bolos
 entrada : 4,6,10 saída: 2
-ebtrada 4, 6, 9 saída : 1
+entrada : 4, 6, 9 saída : 1
 */
 
 function calculabolo (farinha, ovo, leite){
