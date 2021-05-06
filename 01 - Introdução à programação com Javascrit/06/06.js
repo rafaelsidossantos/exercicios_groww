@@ -12,10 +12,13 @@ função: retornaPontuacao(1, 1)
 saída: 5 pontos
 
 função: retonarPontuacao(3, 3)
-Saída: 15 pontos
-*/
-
-
+Saída: 15 pontos*/
+function retornaPontuacao (ponto2 = 0, ponto3 = 0){
+    var resultado1 = ponto2 *2
+    var resultado2 = ponto3 *3
+    var soma = resultado1 + resultado2 
+    console.log(`A pontuação final é : ${soma} pontos`)
+}
 /* Questão 02
 
 O rei do Poker te convidou para criar um programa para ajuda-lo na sua jogatina. A sua ideia é
@@ -37,7 +40,16 @@ retonaAposta(0.2,50,9)
 //processamento 0.2*50-9
 saida : true
 */
-
+console.log(`O valor da probabilidade deverá ser entre 0 e 1`)
+function devojogar (prob = 0, premio = 0, custo = 0){
+    var resposta = (prob*premio) - custo
+    var mensagem = ''
+    if (resposta >= 0){
+        mensagem = 'Jogue!'}
+    else{ 
+        mensagem = 'Não Jogue'}
+    return mensagem
+}
 
 
 /* Questão 03
@@ -53,7 +65,17 @@ calculaCombustivel(16) = 160
 calculaCombustivel(3) = 100
 */
 
+function gastocarro (distancia){
 
+    var combustivel = distancia * 10
+    var mensagem = ''
+        if (distancia>=10){
+        mensagem =  (`A quantidade de combustível é ${combustivel} L`)}
+        else {
+        mensagem =  (`Você deve ter o mínimo de 100L de combustível no carro, mas para essa distância a quantidade de combustível necessária é de ${combustivel}L`) }
+    return mensagem
+}
+    
 
 /* Questão 04
 
@@ -62,3 +84,13 @@ Crie uma função que retorne 1, se entrar com 0 e retorne 0 se entrar com um.
 Não será permitido o uso de condicionais, como IF ou Switch
 
 */
+
+function retorna (a = 0){
+while (a < 1){
+    a++;
+    console.log (1)
+}
+}while (a == 1){
+    console.log (0)
+    }
+

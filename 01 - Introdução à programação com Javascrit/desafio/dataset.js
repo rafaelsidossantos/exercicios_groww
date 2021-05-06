@@ -1,4 +1,4 @@
-var notasAlunosMatriz = [
+/*var notasAlunosMatriz = [
     ["Alfredo", 10, 08 , 10, 10],
     ["Beatriz", 10, 10, 10, 10],
     ["Carlos", 04, 05, 07, 10],
@@ -25,6 +25,30 @@ var notasAlunosMatriz = [
     ["Wagner", 02, 03, 03, 06],
     ["Yasmin", 06, 07, 05, 08]
 ];
+*/
+
+/* O sistema deverá ser desenvolvido em JavaScript. Não é necessário
+desenvolver um interface web. Apenas conter um arquivo .html que chame
+o código.
+→ A entrada das notas será uma Matriz(também fornecido) com as notas
+dos alunos.
+→ O Seu código deve retornar ao professor uma lista(vale qualquer tipo,
+desde um json até o resultado linha a linha) com o nome do Aluno, sua
+média, e se está aprovado ou não
+→ Resultado: O Aluno está aprovado; O Aluno deverá fazer a
+recuperação e O Aluno está reprovado
+→ Deverá também retornar a Última nota dos 30%, a Primeira nota dos 10%
+e a média entre os dois valores 
+"Turma, nesse ano faremos diferente. Além das 4 provas, teremos uma quinta
+prova para aqueles que não alcançarem a nota para passar de ano, que vocês
+não irão saber qual é. Iremos separar vocês em 3 grupos esse ano, sendo o
+Primeiro grupo o dos aprovados direto, o segundo grupo irá para a
+recuperação e o terceiro será automaticamente reprovado. A forma que vamos
+
+Desafio 2
+saber qual a nota, de quem passou e quem não passou é dividindo a média das
+provas(P1 até a P4 que vocês fizeram e alocando vocês numa distribuição de
+frequência que vai acontecer da seguinte forma:*/
 
 var notasAlunosJSON = {
     01:{
@@ -252,4 +276,16 @@ var notasAlunosJSON = {
             04: "08"
         }
     },
+}  
+/*for (var i = 0; i < 4; i++) {
+var soma01 = 0
+soma01 = notasAlunosJSON [i] + soma01
+var media01 = soma01 / 4
+console.log(media01)
+}*/
+function mediaaluno (name) {
+    for (var [key, value] of Object.entries(notasAlunosJSON.notas)){
+        console.log(key)
+        console.log(value)
+    }
 }
